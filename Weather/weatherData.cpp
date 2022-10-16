@@ -76,6 +76,7 @@ int main()
             // break;
         }
     }
+    file.close();
     // cout << dataset[0][7] << endl;
     // dataset[][4] contains month
     // dataset[][5] contains day
