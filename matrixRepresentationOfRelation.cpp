@@ -68,7 +68,8 @@ int main()
     }
 
     // print matrix MR1
-    cout << "MR1 = {(a,b)|a/b}: " << endl;
+    cout << "R1 = {(a,b)|a/b}: " << endl;
+    cout << "MR1: " << endl;
     for (int i = 0; i < set_a_size; i++)
     {
         for (int j = 0; j < set_a_size; j++)
@@ -80,7 +81,8 @@ int main()
     cout << endl;
 
     // print matrix MR2
-    cout << "MR2 = {(a,b)|b/a}: " << endl;
+    cout << "R2 = {(a,b)|b/a}: " << endl;
+    cout << "MR2: " << endl;
     for (int i = 0; i < set_a_size; i++)
     {
         for (int j = 0; j < set_a_size; j++)
@@ -142,4 +144,5 @@ int main()
         cout << endl;
     }
     cout << endl;
+
 }
