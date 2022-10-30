@@ -67,7 +67,7 @@ int main()
             // cout << line;
             string word;
             vector<string> row; // individual strings
-
+            
             while (getline(lineStream, word, ','))
             {
                 row.push_back(word); // individual words (seperated by commas) in 'line'
