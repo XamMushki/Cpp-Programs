@@ -1,8 +1,9 @@
 #include <iostream>
 using namespace std;
-int _stacksize = 50;
+// Global variables
+const int _stacksize = 5;
 int _top = _stacksize - 1;
-int _stack[50];
+int _stack[_stacksize];
 
 void printStack()
 {
@@ -11,29 +12,56 @@ void printStack()
     {
         cout << _stack[i] << endl;
     }
+    cout<<endl;
 }
 
 void push(int num)
 {
-    _stack[_top] = num;
-    _top--;
-    cout << "\nElement Pushed" << endl;
-    printStack();
+    if (_top < 0)
+    {
+        cout << "Stack Overflow!!!\n" << endl;
+    }
+    else
+    {
+        _stack[_top] = num;
+        _top--;
+        cout << num << " Pushed" << endl;
+        printStack();
+    }
 }
 
 void pop()
 {
-    _top++;
-    cout << "\nElement Popped" << endl;
-    printStack();
+    if (_top == _stacksize - 1)
+    {
+        cout << "Stack Underflow!!!\n" << endl;
+    }
+    else
+    {
+        _top++;
+        int element = _stack[_top];
+        cout << element << " Popped" << endl;
+        printStack();
+    }
 }
 
 int main()
 {
     push(13);
-    push(24);
+    push(2);
+    push(3);
+    push(4);
+    push(5);
+    push(6);
+    pop();
+    pop();
+    pop();
+    pop();
+    pop();
     pop();
     push(12);
+    pop();
+    pop();
     pop();
 
     return (0);
